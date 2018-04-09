@@ -1,0 +1,23 @@
+<!--
+File: app.component.html
+File Created: 02/03/2018
+Author: annguyen
+Description: Main component of the application
+-->
+<nav class="navbar navbar-toggleable-sm navbar-light bg-faded">
+    <div class="navbar-nav mr-auto">
+        <a class="nav-item nav-link active" [routerLink]="['home']">Home</a>
+        <a class="nav-item nav-link active" [routerLink]="['restaurant']" *appHasRole="'admin'">Restaurant</a>
+    </div>
+    <div class="navbar-nav" *ngIf="authService.loggedIn()">
+        <span class="navbar-text">Welcome {{authService.currentUser?.username}}! </span>
+        <a class="nav-item nav-link" [routerLink]="['logout']">Logout</a>
+    </div>
+    
+</nav>
+
+<div class="container">
+    <!-- <div class="row error">{{ error$ | async }}</div> -->
+    <div class="alert alert-danger" *ngIf="error">{{ error }}</div>
+    <router-outlet></router-outlet>
+</div>

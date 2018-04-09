@@ -1,0 +1,5 @@
+﻿{
+    "connectionString": "mongodb://admin:password@ds125048.mlab.com:25048/mwa2018",
+    "apiUrl": "http://localhost:4000",
+    "secret": "ReplaceByRealKeyLater"
+}

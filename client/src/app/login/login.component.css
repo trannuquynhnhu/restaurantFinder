@@ -1,0 +1,10 @@
+h2{
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+label{
+    font-weight: bold;
+}
+input{
+    width: 300px;
+}

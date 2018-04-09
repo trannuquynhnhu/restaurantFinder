@@ -1,0 +1,35 @@
+<!--
+File: review.component.html
+File Created: 02/05/2018
+Author: annguyen
+Description:
+-->
+
+<h3>Customer Reviews:</h3>
+<hr>
+<div *ngFor="let item of restaurant?.reviews">
+    <div><b>{{item.username}} </b>- {{item.rating|changRating}}</div>
+    <div>{{item.comment}}</div>
+    <hr>
+</div>
+<br/>
+<button class="btn btn-primary" (click)="addReview()" [disabled]="isEditing">Add Review</button>
+
+
+
+<form *ngIf="isEditing" [formGroup]="reviewForm" class="form-group">
+
+    <textarea class="form-control ctrl-space" rows="5" formControlName="comment"></textarea>
+    <br/>
+    <label for="role">Rating</label>
+    <select formControlName="rating" class="form-control" name="rating" id="rating">
+            <option value="1">1 - Excellent</option>
+            <option value="2">2 - Good</option>
+            <option value="3">3 - Pretty Good</option>
+            <option value="4">4 - Bad</option>
+        </select>
+    <!--<input class="form-control ctrl-space" formControlName="rating" />    -->
+    <button class="btn btn-primary ctrl-space" (click)="saveReview()">OK</button>
+
+
+</form>

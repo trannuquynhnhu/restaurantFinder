@@ -1,0 +1,29 @@
+/**
+ * File: restaurantview.component.js
+ * File Created: 02/05/2018
+ * Author: nutran
+ * Description: Css for restaurant view component
+ */
+
+.container{
+    width: 150px;
+    height: 150px;
+}
+
+.container img {
+    width: 100%;
+    height: auto;
+}
+
+div.row, div#rightSection{
+    margin-top: 30px;
+}
+
+agm-map {
+    height: 300px;
+}
+
+div#appreview{
+    margin-top: 30px !important;
+}
+

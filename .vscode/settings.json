@@ -1,0 +1,18 @@
+{
+    "explorer.confirmDelete": false,
+    "git.enableSmartCommit": true,
+    "editor.tabSize": 4,
+    "editor.detectIndentation": false,
+    "explorer.confirmDragAndDrop": false,
+    "psi-header.templates": [
+        {
+            "language": "*",
+            "template": [
+                "File: <<filename>>",
+                "File Created: <<filecreated('MM/DD/YYYY')>>",
+                "Author: <<author>>",
+                "Description:"
+            ]
+        }
+    ]
+}

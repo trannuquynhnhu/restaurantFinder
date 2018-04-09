@@ -1,0 +1,21 @@
+/*Author: ChauKy Nguyen*/
+
+h2{
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+label{
+    font-weight: bold;
+}
+
+agm-map {
+    height: 300px;
+    width: 500px;
+    float:right;
+}
+#lookup{
+     float:right;  
+}
+#dish{
+    margin-left: 10px;
+}

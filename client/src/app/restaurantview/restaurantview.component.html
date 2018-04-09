@@ -1,0 +1,41 @@
+<!--*
+ * File: restaurantview.component.html
+ * File Created: 02/05/2018
+ * Author: nutran
+ * Description: Html for restaurant view component
+ *-->
+<form>
+    <div class="row">
+        <div class="col-sm-6">           
+            <agm-map [latitude]="restaurant?.location[1]" [longitude]="restaurant?.location[0]">
+                <agm-marker [latitude]="restaurant?.location[1]" [longitude]="restaurant?.location[0]">
+                    <agm-info-window>
+                        <h3>
+                            <strong>Howdy!</strong>
+                        </h3>
+                        <p>You are here!</p>
+                    </agm-info-window>
+                </agm-marker>
+            </agm-map>
+        </div>
+        <div id="rightSection">
+            <!--<div class="row">-->
+                <!-- <div class="container" *ngFor="let img of images">
+                    <img src="http://localhost:3000/restaurant/view/images/5a79d4b83d235137348f760f" alt="map" />
+                </div> -->
+                <!--<div class="container">
+                    <img src="http://localhost:3000/restaurant/view/images/5a79d4b83d235137348f760f" alt="map" />
+                </div>-->
+            <!--</div>-->
+            <h3>{{restaurant?.name}}</h3>
+            <p><b>Address:</b>{{restaurant?.address.street}}, {{restaurant?.address.city}}, {{restaurant?.address.state}} {{restaurant?.address.zip}}</p>
+            <p><b>Rating:</b> {{restaurant?.rating|changRating}}</p>
+        </div>       
+
+    </div>
+
+    <div id="appreview">
+        <app-review [restaurant]="restaurant"></app-review>
+    </div>  
+        
+</form>

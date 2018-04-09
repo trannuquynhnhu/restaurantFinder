@@ -1,0 +1,36 @@
+<!--
+Filename: c:\Users\dnam8\Desktop\project\trunk\client\src\app\admin\restaurantlist.component.html
+Path: c:\Users\dnam8\Desktop\project\trunk\client
+Created Date: Monday, February 5th 2018, 7:56:30 pm
+Author: KyNguyen
+
+Copyright (c) 2018 Your Company
+-->
+<h2>Restaurant List</h2>
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Restaurant</th>
+      <th scope="col">Location</th>
+      <th scope="col">The best main dishes</th>
+      <th scope="col">Customer rating</th>
+    </tr>
+  </thead>
+  <tbody *ngFor="let item of restaurantList; let num = index">
+    <tr>
+      <!-- num is the order number -->
+      <th scope="row">{{num +1}}</th>
+      <td>
+        <a [routerLink]="[item._id]">{{item.name}}</a>
+      </td>
+      <td>{{item.address.street}}, {{item.address.city}}, {{item.address.state}},{{item.address.zip}}</td>
+      <td>{{item.dishes}}</td>
+      <td>{{item.rating|changRating}}</td>
+    </tr>
+  </tbody>
+</table>
+<button class="btn btn-primary" (click)="navigateAdd()">Add</button>
+<div class="container">
+  <router-outlet></router-outlet>
+</div>
